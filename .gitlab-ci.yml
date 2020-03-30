@@ -1,0 +1,25 @@
+image: node:11.14.0
+
+cache:
+  paths:
+    - node_modules/
+
+default:
+  before_script:
+    - npm ci
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run minifier
+
+test:
+  stage: test
+  script:
+    - npm run jest
