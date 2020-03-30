@@ -1,11 +1,11 @@
 import * as React from "react"
 import { render } from "@testing-library/react"
 
-import Home from "../index"
+import IndexPage from "../index"
 
-describe("GificHome suite", () => {
-  it("GificHome should render required props and children", () => {
-    const wrapper = render(<Home />)
+describe("IndexPage suite", () => {
+  it("IndexPage should render", () => {
+    const wrapper = render(<IndexPage />)
 
     expect(wrapper.container).toMatchSnapshot()
   })
