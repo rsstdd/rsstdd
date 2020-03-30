@@ -11,29 +11,29 @@ default:
 stages:
   - build
   - test
-  - deploy
+  # - deploy
 
 build:
   stage: build
   script:
     - npm install
-    - npm run minifier
+    - npm run build
 
 test:
   stage: test
   script:
     - npm run jest
+#
+# deploy-staging:
+#   stage: deploy
+#   script:
+#     - npm run deploy-stage
+#   only:
+#     - develop
 
-deploy-staging:
-  stage: deploy
-  script:
-    - npm run deploy-stage
-  only:
-    - develop
-
-deploy-production:
-  stage: deploy
-  script:
-    - npm run deploy-prod
-  only:
-    - master
+# deploy-production:
+#   stage: deploy
+#   script:
+#     - npm run deploy-prod
+#   only:
+#     - master
