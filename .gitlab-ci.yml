@@ -16,6 +16,7 @@ stages:
 build:
   stage: build
   script:
+    - rm -rf node_modules .cache
     - npm install
     - npm run build
 
