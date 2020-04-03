@@ -16,7 +16,6 @@ stages:
 build:
   stage: build
   script:
-    - rm package.lock.json yarn.lock
     - npm install
     - gatsby clean
     - npm run build
@@ -28,7 +27,7 @@ test:
 #
 # deploy-staging:
 #   stage: deploy
-#   script:
+#   script:s
 #     - npm run deploy-stage
 #   only:
 #     - develop
