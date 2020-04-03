@@ -62,8 +62,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "exports": {
-    ".": "./lib/index.js"
   }
 }
