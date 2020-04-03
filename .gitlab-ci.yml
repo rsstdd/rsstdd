@@ -16,8 +16,8 @@ stages:
 build:
   stage: build
   script:
-    - rm -rf node_modules .cache
     - npm install
+    - gatsby clean
     - npm run build
 
 test:
