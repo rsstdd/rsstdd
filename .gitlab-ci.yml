@@ -17,7 +17,7 @@ build:
   stage: build
   script:
     - npm install
-    - gatsby clean
+    # - gatsby clean
     - npm run build
 
 test:
